@@ -1,0 +1,10 @@
+geometric-figma
+
+Building locally
+$ git clone https://github.com/mathscapes/geometric-figma
+$ cd geometric-figma
+$ npm install
+$ npx webpack --mode=development --watch
+
+Figma Desktop > Plugins > Dev > Import plugin from manifest.. > Select manifest file from the above folder
+Run the plugin

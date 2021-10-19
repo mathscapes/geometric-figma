@@ -1,6 +1,7 @@
 geometric-figma
 
 Building locally
+----------------
 $ git clone https://github.com/mathscapes/geometric-figma
 $ cd geometric-figma
 $ npm install
@@ -8,3 +9,14 @@ $ npx webpack --mode=development --watch
 
 Figma Desktop > Plugins > Dev > Import plugin from manifest.. > Select manifest file from the above folder
 Run the plugin
+
+Contributing
+------------
+To contribute, clone the repository and self-assign active and open issues; create a new branch from the most recent commit point on `main` or `dev-X.X` branch and name your branch as `<btype>-<dev-X.X>-<issue_short_title>`. Assign the issue to yourself, and start working on it.
+
+Possible values of `<btype>`: `[feature, bug, hotfix]`
+Use `<issue_short_title>` as provided in the corresponding issue.
+
+Protected branches: `main`
+
+Work on your branch and send a Pull Request once done.

@@ -17,8 +17,6 @@ To contribute, clone the repository and self-assign active and open issues; crea
 Possible values of `<btype>`: `[feature, bug, hotfix]`
 Use `<issue_short_title>` as provided in the corresponding issue.
 
-Protected branches: `main, stable`
-`main`    : active development branch
-`dev-*.*` : to be deployed instance
+Protected branches: `main`
 
 Work on your branch and send a Pull Request once done.

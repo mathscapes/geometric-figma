@@ -12,7 +12,7 @@ Run the plugin
 
 Contributing
 ------------
-To contribute, clone the repository and self-assign active and open issues; create a new branch from the most recent commit point on `main` or `dev-X.X` branch and name your branch as `<btype>-<dev-X.X>-<issue_short_title>`. Assign the issue to yourself, and start working on it.
+To contribute, clone the repository and self-assign active and open issues; create a new branch from the most recent commit point on `main` or `dev-X.X` branch and name your branch as `<dev-X.X>-<btype>-<issue_short_title>`. Assign the issue to yourself, and start working on it.
 
 Possible values of `<btype>`: `[feature, bug, hotfix]`
 Use `<issue_short_title>` as provided in the corresponding issue.

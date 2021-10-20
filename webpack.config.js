@@ -20,8 +20,8 @@ module.exports = (env, argv) => ({
       // Converts TypeScript code to JavaScript
       { 
         test: /\.tsx?$/, 
-        use: 'ts-loader', 
-        exclude: /node_modules/
+        use: 'ts-loader'
+        // exclude: /node_modules/
       },
 
       // Enables including CSS by doing "import './file.css'" in your TypeScript code

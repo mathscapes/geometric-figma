@@ -39,13 +39,33 @@ class App extends React.Component {
       </div>
       <div className="fieldSet">
         <div className="field">
-          <label className="label">Count</label>
+          <label className="label">A</label>
           <input className="textbox" type="number" />
           <input type="range" min="1" max="10" className="slider"/> 
         </div>
+        <div className="field">
+          <label className="label">A</label>
+          <input className="textbox" type="number" />
+          <input type="range" min="1" max="10" className="slider"/> 
+        </div>
+        <div className="field">
+          <label className="label">A</label>
+          <input className="textbox" type="number" />
+          <input type="range" min="1" max="10" className="slider"/> 
+        </div>
+        <div className="field">
+          <label className="label">A</label>
+          <input className="textbox" type="number" />
+          <input type="range" min="1" max="10" className="slider"/> 
+        </div>
+      </div>
+      <div className="buttonSet">
+        <button className="button">Create</button>
+        <button className="button">Cancel</button>
       </div>
     </div>
   }
 }
 
+// ReactDOM.render(<App />, document.getElementById('app'))
 ReactDOM.render(<App />, document.getElementById('react-page'))

@@ -15,4 +15,33 @@
 
 .fieldSet {
     display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+
+}
+
+.field .label {
+    width: 5%;
+    text-align: left;
+}
+
+.field .textbox {
+    width: 15%;
+}
+
+.field .slider {
+    width: 80%;
+}
+
+.buttonSet {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5em;
 }

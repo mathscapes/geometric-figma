@@ -1,41 +1,23 @@
 import * as React from 'react'
+import { useState } from 'react'
 import * as ReactDOM from 'react-dom'
 import Field from './components/Field'
 import ShapeSelector from './components/ShapeSelector'
-// import { Label } from 'react-figma-plugin-ds';
-// import { echo } from '@mathscapes/geometric';
-
-// import './ui.css'
-
 import './styles.css'
 
 
+function App(){
 
-declare function require(path: string): any
+    const [selectedShape, setSelectedShape] = useState(0);
 
-class App extends React.Component {
-  textbox: HTMLInputElement
-
-  countRef = (element: HTMLInputElement) => {
-    if (element) element.value = '5';
-    this.textbox = element;
-  }
-
-  onCreate = () => {
-    const count = parseInt(this.textbox.value, 10)
-    parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
-  }
-
-  onCancel = () => {
-    parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
-  }
-
-  render() {
     const fields = [{labelTitle:"A", min:"1", max:"10"},
     {labelTitle:"B", min:"1", max:"10"},
     {labelTitle:"C", min:"1", max:"10"},
     {labelTitle:"D", min:"1", max:"10"}];
 
+    // function to fetch json object of the selected shape
+    
+    
     const shapes = [
       {
           "name": "Polar Rose",
@@ -74,7 +56,7 @@ class App extends React.Component {
         <button className="button">Cancel</button>
       </div>
     </div>
-  }
+
 }
 
 // ReactDOM.render(<App />, document.getElementById('app'))

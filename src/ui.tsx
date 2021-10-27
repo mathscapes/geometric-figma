@@ -3,7 +3,11 @@ import * as ReactDOM from 'react-dom'
 // import { Label } from 'react-figma-plugin-ds';
 // import { echo } from '@mathscapes/geometric';
 
-import './ui.css'
+// import './ui.css'
+
+import './styles.css'
+
+
 
 declare function require(path: string): any
 
@@ -25,9 +29,21 @@ class App extends React.Component {
   }
 
   render() {
-    const t = "Hello World 4";
     return <div>
-      <p>{t}</p>
+      <div className="shapeSelector">
+        <p className="label">Select shape</p>
+        <select className="select">
+          <option value="rectangle">Rectangle</option>
+          <option value="circle">Circle</option>
+        </select>
+      </div>
+      <div className="fieldSet">
+        <div className="field">
+          <label className="label">Count</label>
+          <input className="textbox" type="number" />
+          <input type="range" min="1" max="10" className="slider"/> 
+        </div>
+      </div>
     </div>
   }
 }

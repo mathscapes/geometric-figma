@@ -29,6 +29,7 @@
     "@mathscapes/geometric": "^0.1.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dev-utils": "^11.0.4",
     "react-dom": "^17.0.2",

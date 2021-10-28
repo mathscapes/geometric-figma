@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useState } from 'react'
 import * as ReactDOM from 'react-dom'
-import Field from './components/Field'
 import FieldSet from './components/FieldSet'
 import ShapeSelector from './components/ShapeSelector'
 import './styles.css'
@@ -10,11 +9,6 @@ import './styles.css'
 function App(){
 
     const [selectedShape, setSelectedShape] = useState("Polar Rose");
-
-    const fields = [{labelTitle:"A", min:"1", max:"10"},
-    {labelTitle:"B", min:"1", max:"10"},
-    {labelTitle:"C", min:"1", max:"10"},
-    {labelTitle:"D", min:"1", max:"10"}];
 
     const getShape = () => {
       return shapes.filter(i => i.name === selectedShape); 
@@ -49,10 +43,7 @@ function App(){
   ];
 
     return <div>
-      <ShapeSelector />
-      {/* <div className="fieldSet">
-        {fields.map(field => <Field labelTitle={field.labelTitle} min={field.min} max={field.max}/>)}
-      </div> */}
+      <ShapeSelector onShapeChange={setSelectedShape} />
       <FieldSet shape={getShape()}/>
       <div className="buttonSet">
         <button className="button">Create</button>

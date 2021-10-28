@@ -1,13 +1,18 @@
-const React = require("react");
+import * as React from 'react'
+import { useCallback } from 'react'
 
+const shapes = [ "Polar Rose", "Sine", "Polygon", "Spiral", "Superellipse", "Astroid" ];
 
-const shapes = [ "Polar Rose", "Trigonometric function", "Polygon", "Spiral", "Superellipse", "Astroid" ];
+function ShapeSelector({onShapeChange}) {
 
-function ShapeSelector(props) {
+    const handleInputChange = useCallback(event => {
+        onShapeChange(event.target.value)
+      }, [onShapeChange])
+    
     return (
         <div className="shapeSelector">
-            <select className="select" defaultValue={shapes[0]}>
-                {shapes.map(shape => <option value={shape}>{shape}</option>)}
+            <select className="select" onChange={handleInputChange} defaultValue={shapes[0]}>
+                {shapes.map(shape => <option key={shape} value={shape}>{shape}</option>)}
             </select>
         </div>
     );

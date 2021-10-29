@@ -40,7 +40,7 @@ export const shapes = [
     "slug": "tangent",
     "hint": "Real functions which relate an angle of a right-angled triangle to ratios of two side lengths",
     "sliders": [
-        { "label": "a", "min": 15, "max": 200, "symbol": "a", "defaultValue": 100 },
+        { "label": "a", "min": 15, "max": 100, "symbol": "a", "defaultValue": 100 },
         { "label": "b", "min": 1, "max": 128, "symbol": "n", "defaultValue": 1 },
         { "label": "c", "min": 1, "max": 128, "symbol": "d", "defaultValue": 100 },
         { "label": "d", "min": 0, "max": 360, "symbol": "gm", "defaultValue": 1 },

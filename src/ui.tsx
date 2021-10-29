@@ -9,7 +9,7 @@ import './styles.css'
 
 
 function App(){
-    const [selectedShape, setSelectedShape] = useState("Polar Rose");
+    const [selectedShape, setSelectedShape] = useState(shapes[0].name);
 
     //Passes the JSON Object of Selected Shape to the FieldSet Component
     const getSelectedShape = () => {

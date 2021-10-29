@@ -1,19 +1,19 @@
 import * as React from 'react'
 import { useState } from 'react'
 import * as ReactDOM from 'react-dom'
+import shapeGroups from './assets/shapes.config.js'
 
 import FieldSet from './components/FieldSet'
 import ShapeSelector from './components/ShapeSelector'
-import { shapes } from './assets/shapes'
 import './styles.css'
 
 
 function App(){
-    const [selectedShape, setSelectedShape] = useState(shapes[0].name);
+    const [selectedShapeGroup, setSelectedShapeGroup] = useState(shapeGroups[0].name);
 
     //Passes the JSON Object of Selected Shape to the FieldSet Component
     const getSelectedShape = () => {
-      return shapes.filter(i => i.name === selectedShape); 
+      return shapeGroups.filter(i => i.name === selectedShapeGroup); 
     }
 
     //Generates an Array of All Shape Names to pass to the ShapeSelector Component
@@ -21,11 +21,11 @@ function App(){
         return arr.map(shape => shape.name);
     }
 
-    const shapesList = getShapesList(shapes);
+    const shapesList = getShapesList(shapeGroups);
 
     return <div>
-      <ShapeSelector shapesList={shapesList} onShapeChange={setSelectedShape} />
-      <FieldSet shape={getSelectedShape()}/>
+      <ShapeSelector shapesList={shapesList} onShapeChange={setSelectedShapeGroup} />
+      <FieldSet shapeGroup={getSelectedShape()}/>
       <div className="buttonSet">
         <button className="button">Create</button>
         <button className="button">Cancel</button>

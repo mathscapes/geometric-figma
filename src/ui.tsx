@@ -12,7 +12,7 @@ function App(){
     const [selectedShapeGroup, setSelectedShapeGroup] = useState(shapeGroups[0].name);
 
     //Passes the JSON Object of Selected Shape to the FieldSet Component
-    const getSelectedShape = () => {
+    const getSelectedShapeGroup = () => {
       return shapeGroups.filter(i => i.name === selectedShapeGroup); 
     }
 
@@ -22,10 +22,10 @@ function App(){
     }
 
     const shapesList = getShapesList(shapeGroups);
-
+    
     return <div>
       <ShapeSelector shapesList={shapesList} onShapeChange={setSelectedShapeGroup} />
-      <FieldSet shapeGroup={getSelectedShape()}/>
+      <FieldSet shapeGroup={getSelectedShapeGroup()}/>
       <div className="buttonSet">
         <button className="button">Create</button>
         <button className="button">Cancel</button>
